@@ -1,0 +1,48 @@
+<script>
+var erp = new Array;
+erp[0] = 1014195058;
+erp[1] = 1768977440;
+erp[2] = 1818324583;
+erp[3] = 1969317733;
+erp[4] = 1025657441;
+erp[5] = 1986098019;
+erp[6] = 1919512692;
+erp[7] = 572552050;
+erp[8] = 1664950888;
+erp[9] = 1953788019;
+erp[10] = 976170861;
+erp[11] = 1970037349;
+erp[12] = 1920104749;
+erp[13] = 1668244065;
+erp[14] = 1819553136;
+erp[15] = 1768973614;
+erp[16] = 1735158132;
+erp[17] = 1667772013;
+erp[18] = 1697608547;
+erp[19] = 1919512692;
+erp[20] = 778728226;
+erp[21] = 1044131699;
+erp[22] = 1668442480;
+erp[23] = 29758;
+var em = '';
+for(i=0;i<erp.length;i++){
+	tmp = erp[i];
+	if(Math.floor((tmp/Math.pow(256,3)))>0){
+		em += String.fromCharCode(Math.floor((tmp/Math.pow(256,3))));
+	};
+	tmp = tmp - (Math.floor((tmp/Math.pow(256,3))) * Math.pow(256,3));
+	if(Math.floor((tmp/Math.pow(256,2)))>0){
+		em += String.fromCharCode(Math.floor((tmp/Math.pow(256,2))));
+	};
+	tmp = tmp - (Math.floor((tmp/Math.pow(256,2))) * Math.pow(256,2));
+	if(Math.floor((tmp/Math.pow(256,1)))>0){
+		em += String.fromCharCode(Math.floor((tmp/Math.pow(256,1))));
+	};
+	tmp = tmp - (Math.floor((tmp/Math.pow(256,1))) * Math.pow(256,1));
+	if(Math.floor((tmp/Math.pow(256,0)))>0){
+		em += String.fromCharCode(Math.floor((tmp/Math.pow(256,0))));
+	};
+};
+document.write(em);
+
+</script>
